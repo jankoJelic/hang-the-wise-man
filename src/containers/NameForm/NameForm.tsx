@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Button from "../../components/Button";
+import getPuzzle from "../../services/getPuzzle";
 
 const NameForm = () => {
   const [value, setValue] = useState("");
@@ -7,8 +8,13 @@ const NameForm = () => {
   const handleChange = (e: React.FormEvent<HTMLInputElement>) =>
     setValue(e.currentTarget.value);
 
+  const onSubmitName = async () => {
+    const puzzle = await getPuzzle();
+
+    
+  };
   return (
-    <form
+    <div
       className="flex flex-col p-8 border-solid border mt-10 
     rounded-xl bg-white items-center w-72 sm:w-96 shadow-md"
     >
@@ -22,8 +28,8 @@ const NameForm = () => {
         value={value}
         onChange={handleChange}
       />
-      <Button title="Enter" />
-    </form>
+      <Button title="Enter" onClick={onSubmitName} />
+    </div>
   );
 };
 
