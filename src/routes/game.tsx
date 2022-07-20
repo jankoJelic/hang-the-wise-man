@@ -1,4 +1,5 @@
 import Keyboard from "components/Keyboard/Keyboard";
+import Solution from "components/Solution";
 import Title from "components/Title";
 import Hangman from "containers/Hangman";
 import { appContext } from "context";
@@ -19,7 +20,7 @@ const Game = () => {
   const [startTime, setStartTime] = useState(Date.now());
   const [endTime, setEndTime] = useState(Date.now());
 
-  const [lettersGuessed, setLettersGuessed] = useState([]);
+  const [usedLetters, setUsedLetters] = useState<string[]>([]);
   const [numberOfMistakes, setNumberOfMistakes] = useState(0);
 
   const { data } = location.state as { data: Puzzle };
@@ -27,15 +28,31 @@ const Game = () => {
   const solution = data.content;
 
   useEffect(() => {
-    !appState.playerName && navigate("/");
+    if (!appState.playerName) {
+      navigate("/");
+      return;
+    }
+
+    resetStartTime();
   }, []);
+
+  const resetStartTime = () => setStartTime(Date.now());
+
+  const handleLetterClick = (letter: string) => {
+    if (!solution.includes(letter)) {
+      setNumberOfMistakes((prevState) => prevState + 1);
+    }
+
+    setUsedLetters((prevState) => prevState.concat([letter]));
+  };
 
   return (
     <div className="flex flex-col items-center pt-10">
       <Title text={`Good luck, ${appState.playerName}!`} />
-      <Hangman />
-      <h2 className="font-semibold mt-4">A wise man once said:</h2>
-      <Keyboard />
+      <Hangman mistakes={numberOfMistakes} />
+      <h2 className="font-semibold my-4">A wise man once said:</h2>
+      <Solution solution={solution} usedLetters={usedLetters} />
+      <Keyboard onClickLetter={handleLetterClick} usedLetters={usedLetters} />
     </div>
   );
 };

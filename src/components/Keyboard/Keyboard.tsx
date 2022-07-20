@@ -1,13 +1,19 @@
-import CONSTANTS from "constants";
-import React from "react";
+type Props = {
+  onClickLetter: (letter: string) => void;
+  usedLetters: string[];
+};
 
-const Keyboard = () => {
-  const alphabet = "abcdefghijklmnopqrstuvwxyz";
+const Keyboard: React.FC<Props> = ({ onClickLetter, usedLetters }) => {
+  const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+  const letterIsUsed = (letter: string) => usedLetters.includes(letter);
 
   const Letter = ({ letter }: { letter: string }) => (
     <div
-      className="flex w-8 aspect-square rounded-lg m-4 
-      cursor-pointer bg-mainExtraLight items-center justify-center"
+      className={`flex w-8 aspect-square rounded-lg m-2 
+      cursor-pointer items-center justify-center
+      bg-${letterIsUsed(letter) ? "gray-300" : "mainExtraLight"}`}
+      onClick={() => onClickLetter(letter)}
     >
       {letter}
     </div>
