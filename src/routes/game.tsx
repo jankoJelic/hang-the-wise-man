@@ -75,9 +75,15 @@ const Game = () => {
       <Button title="Restart game" styles="w-48 mt-12" onClick={restartGame} />
       <MainModal
         visible={modalVisible}
-        onClickCancel={() => setModalVisible(false)}
+        onClickCancel={() => {
+          setModalVisible(false);
+          goToHomePage();
+        }}
         title="You lost!"
-        onClickButton={goToHomePage}
+        onClickButton={() => {
+          setModalVisible(false);
+          restartGame();
+        }}
         description="New game?"
         showTwoButtons
         confirmButtonTitle="Yes, please"
