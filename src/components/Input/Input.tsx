@@ -8,7 +8,9 @@ const Input = () => {
 
   return (
     <input
-      className="shadow appearance-none border border-mainAction rounded-xl w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline my-4"
+      className="border border-mainAction 
+      rounded-xl w-full py-2 px-3 text-gray-700 mb-3 leading-tight my-4
+      focus:outline-none focus:bg-gray-100 focus:border-mainLight"
       type="text"
       name="name"
       value={value}
