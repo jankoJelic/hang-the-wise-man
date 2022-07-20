@@ -12,7 +12,7 @@ const Solution = ({ solution, usedLetters }: Props) => {
         const isLetter = onlyLettersInString(char);
         const isUsed = usedLetters.includes(char.toUpperCase());
         const isQuotationMark = char === "'";
-
+        console.log(isLetter);
         return (
           <div
             key={char + index + "--"}

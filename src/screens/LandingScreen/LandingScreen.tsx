@@ -1,4 +1,5 @@
-import Title from "components/Title";
+import MainModal from "components/MainModal";
+import Title from "components/textComponents/Title";
 import NameForm from "../../containers/NameForm";
 
 const LandingScreen = () => {

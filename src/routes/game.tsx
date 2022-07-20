@@ -1,7 +1,8 @@
 import Button from "components/Button";
 import Keyboard from "components/Keyboard/Keyboard";
+import MainModal from "components/MainModal";
 import Solution from "components/Solution";
-import Title from "components/Title";
+import Title from "components/textComponents/Title";
 import Hangman from "containers/Hangman";
 import { appContext } from "context";
 import { useContext, useEffect, useState } from "react";
@@ -25,6 +26,7 @@ const Game = () => {
   const [endTime, setEndTime] = useState(Date.now());
   const [usedLetters, setUsedLetters] = useState<string[]>([]);
   const [numberOfMistakes, setNumberOfMistakes] = useState(0);
+  const [modalVisible, setModalVisible] = useState(false);
 
   const lastChance = numberOfMistakes === 6;
 
@@ -42,14 +44,7 @@ const Game = () => {
   const handleLetterClick = (letter: string) => {
     if (!solution.toUpperCase().includes(letter)) {
       if (lastChance) {
-        appState.setAppState({
-          ...appState,
-          modal: {
-            visible: true,
-            title: "Game over!",
-            buttonTitle: "New game",
-          },
-        });
+        setModalVisible(true);
       }
       setNumberOfMistakes((prevState) => prevState + 1);
     }
@@ -81,6 +76,7 @@ const Game = () => {
         className="w-48 mt-12"
         onClick={restartGame}
       />
+      {/* <MainModal visible={modalVisible} title="Title" /> */}
     </div>
   );
 };
