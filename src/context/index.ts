@@ -1,5 +1,3 @@
-import { appContext } from "./appContext";
+import { appContext, AppProvider } from "./appContext";
 
-export default {
-  appContext,
-};
+export { appContext, AppProvider };

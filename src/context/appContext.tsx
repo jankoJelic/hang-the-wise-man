@@ -1,19 +1,13 @@
-import React, {
-  createContext,
-  Dispatch,
-  SetStateAction,
-  useState,
-} from "react";
+import React, { createContext, useState } from "react";
 
 type Context = {
   playerName: string;
-  gameDuration: number;
   modal: {
     visible: boolean;
     title: string;
     description: string;
   };
-  setAppState: Dispatch<SetStateAction<Context>>;
+  setAppState: (value: Context) => void;
 };
 
 type Props = {
@@ -22,7 +16,6 @@ type Props = {
 
 const initialState: Context = {
   playerName: "",
-  gameDuration: 0,
   modal: {
     visible: false,
     title: "",
@@ -38,8 +31,10 @@ const appContext = createContext<Context>(initialState);
 const AppProvider = ({ children }: Props): JSX.Element => {
   const [appState, setAppState] = useState(initialState);
 
+  const setContext = (value: Context) => setAppState(value);
+
   return (
-    <appContext.Provider value={{ ...appState, setAppState }}>
+    <appContext.Provider value={{ ...appState, setAppState: setContext }}>
       {children}
     </appContext.Provider>
   );

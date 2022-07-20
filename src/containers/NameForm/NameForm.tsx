@@ -1,18 +1,27 @@
-import { useState } from "react";
-import Button from "../../components/Button";
-import getPuzzle from "../../services/getPuzzle";
+import { useContext, useState } from "react";
+import { appContext } from "../../context/appContext";
+import { useNavigate } from "react-router-dom";
+import Button from "components/Button";
+import getPuzzle from "services/getPuzzle";
 
 const NameForm = () => {
+  const navigate = useNavigate();
+  const appState = useContext(appContext);
+
   const [value, setValue] = useState("");
 
   const handleChange = (e: React.FormEvent<HTMLInputElement>) =>
     setValue(e.currentTarget.value);
 
   const onSubmitName = async () => {
-    const puzzle = await getPuzzle();
+    const response = await getPuzzle();
 
-    
+    if (response.ok) {
+      appState.setAppState({ ...appState, playerName: value });
+      navigate("/game");
+    }
   };
+
   return (
     <div
       className="flex flex-col p-8 border-solid border mt-10 
