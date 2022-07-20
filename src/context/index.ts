@@ -1,4 +1,4 @@
-import { appContext } from "./context";
+import { appContext } from "./appContext";
 
 export default {
   appContext,
