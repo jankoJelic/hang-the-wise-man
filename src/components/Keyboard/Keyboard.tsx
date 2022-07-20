@@ -22,7 +22,7 @@ const Keyboard: React.FC<Props> = ({ onClickLetter, usedLetters }) => {
   return (
     <div className="flex flex-wrap p-4 mx-4 mt-8">
       {alphabet.split("").map((letter) => (
-        <Letter letter={letter} />
+        <Letter letter={letter} key={letter + "_"} />
       ))}
     </div>
   );

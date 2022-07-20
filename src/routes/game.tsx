@@ -39,7 +39,7 @@ const Game = () => {
   const resetStartTime = () => setStartTime(Date.now());
 
   const handleLetterClick = (letter: string) => {
-    if (!solution.includes(letter)) {
+    if (!solution.toUpperCase().includes(letter)) {
       setNumberOfMistakes((prevState) => prevState + 1);
     }
 

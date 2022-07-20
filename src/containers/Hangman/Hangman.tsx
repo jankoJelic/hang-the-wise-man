@@ -34,12 +34,12 @@ const Hangman = ({ mistakes = 0 }) => {
   );
 
   const bodyParts = [
-    <Head />,
-    <Body />,
-    <LeftLeg />,
-    <RightLeg />,
-    <LeftHand />,
-    <RightHand />,
+    <Head key="head" />,
+    <Body key="body" />,
+    <LeftLeg key="leftLeg" />,
+    <RightLeg key="rightLeg" />,
+    <LeftHand key="leftHand" />,
+    <RightHand key="rightHand" />,
   ];
 
   return (
