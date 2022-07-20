@@ -4,12 +4,14 @@ import { useNavigate } from "react-router-dom";
 import Button from "components/Button";
 import getPuzzle from "services/getPuzzle";
 import Subtitle from "components/textComponents/Subtitle/Subtitle";
+import MainModal from "components/MainModal";
 
 const NameForm = () => {
   const navigate = useNavigate();
   const appState = useContext(appContext);
 
   const [value, setValue] = useState("");
+  const [modalVisible, setModalVisible] = useState(false);
 
   const parseNameInput = (input: string) => input.replace(/[^a-z]/gi, "");
 
@@ -20,6 +22,11 @@ const NameForm = () => {
     event.key === "Enter" && onSubmitName();
 
   const onSubmitName = async () => {
+    if (!value) {
+      setModalVisible(true);
+      return;
+    }
+
     const response = await getPuzzle();
 
     if (!!response) {
@@ -45,6 +52,11 @@ const NameForm = () => {
         onKeyDown={handleKeyDown}
       />
       <Button title="Enter" onClick={onSubmitName} />
+      <MainModal
+        visible={modalVisible}
+        title="Please enter your name"
+        onClickButton={() => setModalVisible(false)}
+      />
     </div>
   );
 };

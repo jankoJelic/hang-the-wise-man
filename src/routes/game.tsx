@@ -29,10 +29,11 @@ const Game = () => {
   const [modalVisible, setModalVisible] = useState(false);
 
   const lastChance = numberOfMistakes === 6;
+  const goToHomePage = () => navigate("/");
 
   useEffect(() => {
     if (!appState.playerName) {
-      navigate("/");
+      goToHomePage();
       return;
     }
 
@@ -71,12 +72,16 @@ const Game = () => {
       }`}</h2>
       <Solution solution={solution} usedLetters={usedLetters} />
       <Keyboard onClickLetter={handleLetterClick} usedLetters={usedLetters} />
-      <Button
-        title="Restart game"
-        className="w-48 mt-12"
-        onClick={restartGame}
+      <Button title="Restart game" styles="w-48 mt-12" onClick={restartGame} />
+      <MainModal
+        visible={modalVisible}
+        onClickCancel={() => setModalVisible(false)}
+        title="You lost!"
+        onClickButton={goToHomePage}
+        description="New game?"
+        showTwoButtons
+        confirmButtonTitle="Yes, please"
       />
-      {/* <MainModal visible={modalVisible} title="Title" /> */}
     </div>
   );
 };
