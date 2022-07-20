@@ -10,8 +10,10 @@ const NameForm = () => {
 
   const [value, setValue] = useState("");
 
+  const parseNameInput = (input: string) => input.replace(/[^a-z]/gi, "");
+
   const handleChange = (e: React.FormEvent<HTMLInputElement>) =>
-    setValue(e.currentTarget.value);
+    setValue(parseNameInput(e.currentTarget.value));
 
   const handleKeyDown = (event: React.KeyboardEvent) =>
     event.key === "Enter" && onSubmitName();

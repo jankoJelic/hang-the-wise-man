@@ -11,6 +11,15 @@ module.exports = {
         mainExtraLight: "#f9cfff",
         mainText: "#363636",
       },
+      spacing: {
+        19: "4.6rem",
+        29: "7.15rem",
+        30: "7.25rem",
+        34: "8.6rem",
+      },
+      rotate: {
+        135: "135deg",
+      },
     },
   },
   plugins: [],
