@@ -1,9 +1,15 @@
 import { Outlet, Link } from "react-router-dom";
+import useDimensions from "./hooks/useDimensions";
 import LandingScreen from "./screens/LandingScreen";
 
 const App = () => {
+  const { width, height } = useDimensions();
+
   return (
-    <main className="flex flex-col items-center justify-center min-h-max">
+    <main
+      style={{ minWidth: width, minHeight: height }}
+      className="flex flex-col items-center pt-10 bg-gradient-to-br from-white to-mainExtraLight"
+    >
       <LandingScreen />
       {/* <nav
         style={{
