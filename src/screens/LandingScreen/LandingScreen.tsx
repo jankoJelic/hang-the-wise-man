@@ -1,6 +1,3 @@
-import React from "react";
-import Button from "../../components/Button";
-import Input from "../../components/Input";
 import NameForm from "../../containers/NameForm";
 
 const LandingScreen = () => {
