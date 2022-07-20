@@ -6,7 +6,8 @@ type Context = {
   modal: {
     visible: boolean;
     title: string;
-    description: string;
+    description?: string;
+    buttonTitle: string;
   };
   setAppState: (value: Context) => void;
 };
@@ -22,6 +23,7 @@ const initialState: Context = {
     visible: false,
     title: "",
     description: "",
+    buttonTitle: "",
   },
   setAppState: (): void => {
     throw new Error("setContext function must be overridden");
