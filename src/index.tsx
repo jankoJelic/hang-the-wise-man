@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Game from "./routes/game";
 import Highscores from "./routes/highscores";
+import { AppProvider } from "./context/context";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -13,11 +14,13 @@ const root = ReactDOM.createRoot(
 root.render(
   <BrowserRouter>
     <React.StrictMode>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="game" element={<Game />} />
-        <Route path="highscores" element={<Highscores />} />
-      </Routes>
+      <AppProvider>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="game" element={<Game />} />
+          <Route path="highscores" element={<Highscores />} />
+        </Routes>
+      </AppProvider>
     </React.StrictMode>
   </BrowserRouter>
 );
