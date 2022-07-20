@@ -1,3 +1,4 @@
+import Keyboard from "components/Keyboard/Keyboard";
 import Title from "components/Title";
 import Hangman from "containers/Hangman";
 import { appContext } from "context";
@@ -17,9 +18,13 @@ const Game = () => {
 
   const [startTime, setStartTime] = useState(Date.now());
   const [endTime, setEndTime] = useState(Date.now());
+
+  const [lettersGuessed, setLettersGuessed] = useState([]);
   const [numberOfMistakes, setNumberOfMistakes] = useState(0);
 
   const { data } = location.state as { data: Puzzle };
+
+  const solution = data.content;
 
   useEffect(() => {
     !appState.playerName && navigate("/");
@@ -30,6 +35,7 @@ const Game = () => {
       <Title text={`Good luck, ${appState.playerName}!`} />
       <Hangman />
       <h2 className="font-semibold mt-4">A wise man once said:</h2>
+      <Keyboard />
     </div>
   );
 };
