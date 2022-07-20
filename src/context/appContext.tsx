@@ -2,6 +2,7 @@ import React, { createContext, useState } from "react";
 
 type Context = {
   playerName: string;
+  isLoading: boolean;
   modal: {
     visible: boolean;
     title: string;
@@ -16,6 +17,7 @@ type Props = {
 
 const initialState: Context = {
   playerName: "",
+  isLoading: false,
   modal: {
     visible: false,
     title: "",
