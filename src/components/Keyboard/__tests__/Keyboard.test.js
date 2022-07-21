@@ -4,6 +4,7 @@ import { fireEvent, render, screen } from "@testing-library/react";
 
 const mockClickLetter = jest.fn();
 const mockUsedLetters = "ASDF";
+
 const renderKeyboard = () =>
   render(
     <Keyboard onClickLetter={mockClickLetter} usedLetters={mockUsedLetters} />

@@ -10,7 +10,7 @@ const LoadingSpinner = () => {
 
   return (
     <BackdropOverlay>
-      <Spinner className="bg-transparent" />
+      <Spinner role="spinner" className="bg-transparent" />
     </BackdropOverlay>
   );
 };
