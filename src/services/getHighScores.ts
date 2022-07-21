@@ -3,7 +3,6 @@ import { HIGHSCORE_URL } from "../constants";
 
 const getHighScores = async () => {
   const response = await axios.get(HIGHSCORE_URL);
-
   return response;
 };
 
