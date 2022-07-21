@@ -49,7 +49,7 @@ const HighScoresTable = ({ data }: { data: Highscore[] }) => {
               <td className="">{hs.userName}</td>
               <td>{hs.length}</td>
               <td>{hs.uniqueCharacters}</td>
-              <td>{hs.duration / 1000}</td>
+              <td>{Math.round(hs.duration / 1000)}</td>
               <td className="font-semibold text-mainAction">{hs.score}</td>
               <td>{hs.realScore.toFixed(5)}</td>
             </tr>
