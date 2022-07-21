@@ -8,7 +8,6 @@ import { appContext } from "context";
 import { useContext, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import getPuzzle from "services/getPuzzle";
-import onlyLettersInString from "util/onlyLettersInString";
 
 type Puzzle = {
   author: string;

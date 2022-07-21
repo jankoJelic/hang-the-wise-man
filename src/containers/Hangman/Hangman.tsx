@@ -1,6 +1,7 @@
 import React from "react";
 
 const Hangman = ({ mistakes = 0 }) => {
+  const gameOver = mistakes === 7;
   const Gallows = () => (
     <>
       <div className="w-1 bg-mainText h-52" />
@@ -9,8 +10,17 @@ const Hangman = ({ mistakes = 0 }) => {
     </>
   );
 
+  const SadFace = () => (
+    <>
+      <div className="text-center text-xs font-semibold mt-1">x x</div>
+      <p className="text-center text-xs font-semibold rotate-90 -mt-2">(</p>
+    </>
+  );
+
   const Head = () => (
-    <div className="w-8 h-8 rounded-full border-2 absolute ml-29 top-4 border-black" />
+    <div className="w-8 h-8 rounded-full border-2 absolute ml-29 top-4 border-black">
+      {gameOver && <SadFace />}
+    </div>
   );
 
   const Body = () => (
