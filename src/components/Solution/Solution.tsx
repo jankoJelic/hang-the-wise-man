@@ -6,8 +6,6 @@ type Props = {
 };
 
 const Solution = ({ solution, usedLetters }: Props) => {
-  const gameWon = usedLetters.every((l) => solution.includes(l));
-
   const renderLetters = () => {
     return solution.split(" ").map((word, index) => {
       return (
