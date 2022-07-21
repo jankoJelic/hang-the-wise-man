@@ -2,6 +2,7 @@
 
 Running app locally: 
 - make sure you have node and npm installed on your machine by typing "node -v" and "npm -v"
+- clone repository
 - go to repository root folder
 - "npm install" to install dependencies
 - "npm start" to run the app
