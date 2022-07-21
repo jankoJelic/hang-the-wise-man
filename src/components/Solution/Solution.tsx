@@ -15,7 +15,6 @@ const Solution = ({ solution, usedLetters }: Props) => {
           key={word + "-" + index}
         >
           {word.split("").map((char, i) => {
-            console.log(word);
             const isLetter = onlyLettersInString(char);
             const isUsed = usedLetters.includes(char.toUpperCase());
             const isQuotationMark = char === "'";

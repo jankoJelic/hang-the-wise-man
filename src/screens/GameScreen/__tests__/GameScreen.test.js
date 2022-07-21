@@ -1,5 +1,20 @@
 import { render, screen, fireEvent } from "test-utils";
 import GameScreen from "../GameScreen";
+import axios from "axios";
+import { act } from "react-test-renderer";
+
+jest.mock("axios");
+
+const mockSolution = {
+  _id: "Stv2simdFUzRv",
+  content: "This is a mocked sentence.",
+  author: "Janko Jelic",
+  tags: ["famous-quotes"],
+  authorSlug: "janko-jelic",
+  length: 104,
+  dateAdded: "2020-04-02",
+  dateModified: "2020-04-02",
+};
 
 const renderGameScreen = () => render(<GameScreen />);
 
@@ -43,6 +58,26 @@ describe("GameScreen", () => {
     fireEvent.click(screen.getByText("D"));
     fireEvent.click(screen.getByText("M"));
 
+    expect(screen.getByRole("head")).toBeInTheDocument();
+    expect(screen.getByRole("leftHand")).toBeInTheDocument();
+    expect(screen.getByRole("rightHand")).toBeInTheDocument();
+    expect(screen.getByRole("leftLeg")).toBeInTheDocument();
+    expect(screen.getByRole("rightLeg")).toBeInTheDocument();
     expect(screen.getByText("You lost!")).toBeInTheDocument();
+  });
+
+  it("restarts the game when button is clicked", async () => {
+    renderGameScreen();
+    const restartButton = await screen.findByText("Restart game");
+    await axios.get.mockResolvedValueOnce(mockSolution);
+
+    await act(() => {
+      fireEvent.click(screen.getByText("X"));
+      fireEvent.click(screen.getByText("Z"));
+
+      fireEvent.click(restartButton);
+    });
+
+    expect(axios.get).toHaveBeenCalledTimes(1);
   });
 });

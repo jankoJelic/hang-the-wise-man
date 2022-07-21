@@ -26,7 +26,7 @@ const GameScreen = () => {
   const [usedLetters, setUsedLetters] = useState<string[]>([]);
   const [numberOfMistakes, setNumberOfMistakes] = useState(0);
   const [modalVisible, setModalVisible] = useState(false);
-  console.log(data);
+
   const parsedSolution = solution.toUpperCase().replace(/[^A-Z]+/g, "");
   const lastChance = numberOfMistakes === 6;
   const goToHomePage = () => navigate("/");
