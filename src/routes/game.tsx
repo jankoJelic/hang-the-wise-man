@@ -4,10 +4,11 @@ import MainModal from "components/MainModal";
 import Solution from "components/Solution";
 import Title from "components/textComponents/Title";
 import Hangman from "containers/Hangman";
-import { appContext } from "context";
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import getPuzzle from "services/getPuzzle";
+import { useSelector } from "react-redux";
+import { RootState } from "store/store";
 
 type Puzzle = {
   author: string;
@@ -18,7 +19,7 @@ type Puzzle = {
 const Game = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const appState = useContext(appContext);
+  const appState = useSelector((state: RootState) => state.appState);
   const { data } = location.state as { data: Puzzle };
 
   const [solution, setSolution] = useState(data.content);
