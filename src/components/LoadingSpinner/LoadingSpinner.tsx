@@ -5,7 +5,7 @@ import { ReactComponent as Spinner } from "../../assets/spinner.svg";
 
 const LoadingSpinner = () => {
   const visible = useSelector((state: RootState) => state.appState.isLoading);
-  console.log(visible);
+
   if (!visible) return <></>;
 
   return (
