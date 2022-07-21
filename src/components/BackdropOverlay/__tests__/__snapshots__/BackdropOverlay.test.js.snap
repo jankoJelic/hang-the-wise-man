@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="flex fixed inset-0 left-0 w-screen h-screen
+   bg-mainText bg-opacity-60 items-center justify-center shadow-md undefined"
+/>
+`;

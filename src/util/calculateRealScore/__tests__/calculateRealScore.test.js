@@ -1,4 +1,4 @@
-import calculateRealScore from "./calculateRealScore";
+import calculateRealScore from "../calculateRealScore";
 
 const bestScore = {
   quoteLength: 57,

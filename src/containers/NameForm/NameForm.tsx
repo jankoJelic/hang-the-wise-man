@@ -27,6 +27,7 @@ const NameForm = () => {
 
     if (!value) {
       setModalVisible(true);
+      dispatch(setIsLoading(false));
       return;
     }
 
@@ -56,7 +57,7 @@ const NameForm = () => {
         onChange={handleChange}
         onKeyDown={handleKeyDown}
       />
-      <Button title="Enter" onClick={onSubmitName} />
+      <Button title="Enter" onClick={onSubmitName} disabled={value === ""} />
       <MainModal
         visible={modalVisible}
         title="Please enter your name"
