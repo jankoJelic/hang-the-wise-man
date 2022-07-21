@@ -8,6 +8,7 @@ import { appContext } from "context";
 import { useContext, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import getPuzzle from "services/getPuzzle";
+import onlyLettersInString from "util/onlyLettersInString";
 
 type Puzzle = {
   author: string;
@@ -28,7 +29,13 @@ const Game = () => {
   const [numberOfMistakes, setNumberOfMistakes] = useState(0);
   const [modalVisible, setModalVisible] = useState(false);
 
+  const parsedSolution = solution.toUpperCase().replace(/[^A-Z]+/g, "");
+  const gameWon =
+    !!usedLetters.length &&
+    parsedSolution.split("").every((l) => usedLetters.includes(l));
+
   const lastChance = numberOfMistakes === 6;
+
   const goToHomePage = () => navigate("/");
 
   useEffect(() => {
@@ -39,6 +46,10 @@ const Game = () => {
 
     resetStartTime();
   }, []);
+
+  useEffect(() => {
+    gameWon && setModalVisible(true);
+  }, [gameWon]);
 
   const resetStartTime = () => setStartTime(Date.now());
 
@@ -79,7 +90,7 @@ const Game = () => {
           setModalVisible(false);
           goToHomePage();
         }}
-        title="You lost!"
+        title={gameWon ? "You won!" : "You lost!"}
         onClickButton={() => {
           setModalVisible(false);
           restartGame();
