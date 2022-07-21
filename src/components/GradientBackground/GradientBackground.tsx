@@ -1,10 +1,11 @@
 import useDimensions from "hooks/useDimensions";
+import useWindowSize from "hooks/useWindowsSize";
 
 type Props = {
   children: React.ReactNode;
 };
 const GradientBackground: React.FC<Props> = ({ children }) => {
-  const { width, height } = useDimensions();
+  const { width, height } = useWindowSize();
 
   return (
     <main
