@@ -5,7 +5,7 @@ import store from "store/store";
 const useAbortEffect = (asyncFunction = () => {}, dependencies = []) => {
   useEffect(() => {
     store.dispatch(setIsLoading(true));
-    
+
     const abortController = new AbortController();
 
     if (!abortController.signal.aborted) {
