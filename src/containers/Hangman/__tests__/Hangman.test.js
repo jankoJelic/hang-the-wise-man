@@ -20,7 +20,7 @@ describe("elements by number of mistakes", () => {
     });
   });
 
-  it("renders correct number of body parts", () => {
+  it("renders correct number of elements", () => {
     const wrapper = renderHangman(5);
 
     const container = wrapper.getByRole("container");
@@ -28,7 +28,7 @@ describe("elements by number of mistakes", () => {
   });
 });
 
-it("renders a maximum of 7 body parts", async () => {
+it("renders a maximum of 7 elements", async () => {
   const wrapper = renderHangman(100);
 
   const container = await wrapper.findByRole("container");
