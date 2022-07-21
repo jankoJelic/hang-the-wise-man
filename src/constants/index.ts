@@ -1,5 +1,5 @@
-const CONSTANTS = {
-  alphabet: "abcdefghijklmnopqrstuvwxyz",
-};
+export const PUZZLE_URL = "http://api.quotable.io/random";
+export const HIGHSCORE_URL =
+  "https://my-json-server.typicode.com/stanko-ingemark/hang_the_wise_man_frontend_task/highscores";
 
-export default CONSTANTS;
+export const ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";

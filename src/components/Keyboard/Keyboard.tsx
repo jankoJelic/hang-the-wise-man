@@ -1,11 +1,11 @@
+import { ALPHABET } from "../../constants";
+
 type Props = {
   onClickLetter: (letter: string) => void;
   usedLetters: string[];
 };
 
 const Keyboard: React.FC<Props> = ({ onClickLetter, usedLetters }) => {
-  const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
   const Letter = ({ letter }: { letter: string }) => {
     const letterIsUsed = usedLetters.includes(letter);
 
@@ -22,8 +22,8 @@ const Keyboard: React.FC<Props> = ({ onClickLetter, usedLetters }) => {
   };
 
   return (
-    <div className="flex flex-wrap p-4 mx-4 mt-8">
-      {alphabet.split("").map((letter) => (
+    <div className="flex flex-wrap p-4 mx-4 mt-8 md:px-16">
+      {ALPHABET.split("").map((letter) => (
         <Letter letter={letter} key={letter + "_"} />
       ))}
     </div>

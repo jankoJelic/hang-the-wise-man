@@ -36,6 +36,7 @@ const NameForm = () => {
       dispatch(setPlayerName(value));
       navigate("/game", { state: { data: response.data } });
     }
+
     dispatch(setIsLoading(false));
   };
 

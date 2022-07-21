@@ -9,14 +9,13 @@ import { useLocation, useNavigate } from "react-router-dom";
 import getPuzzle from "services/getPuzzle";
 import { useSelector } from "react-redux";
 import { RootState } from "store/store";
-
-type Puzzle = {
-  author: string;
-  content: string;
-  length: number;
-};
+import Puzzle from "models/Puzzle";
+import { useDispatch } from "react-redux";
+import { setIsLoading } from "store/appSlice";
+import postHighScore from "services/postHighScore";
 
 const GameScreen = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const location = useLocation();
   const appState = useSelector((state: RootState) => state.appState);
@@ -30,13 +29,11 @@ const GameScreen = () => {
   const [modalVisible, setModalVisible] = useState(false);
 
   const parsedSolution = solution.toUpperCase().replace(/[^A-Z]+/g, "");
+  const lastChance = numberOfMistakes === 6;
+  const goToHomePage = () => navigate("/");
   const gameWon =
     !!usedLetters.length &&
     parsedSolution.split("").every((l) => usedLetters.includes(l));
-
-  const lastChance = numberOfMistakes === 6;
-
-  const goToHomePage = () => navigate("/");
 
   useEffect(() => {
     if (!appState.playerName) {
@@ -48,7 +45,11 @@ const GameScreen = () => {
   }, []);
 
   useEffect(() => {
-    gameWon && setModalVisible(true);
+    if (gameWon) {
+      const duration = Date.now() - startTime
+      postHighScore(data, numberOfMistakes, duration, usedLetters);
+      navigate("/highscores");
+    }
   }, [gameWon]);
 
   const resetStartTime = () => setStartTime(Date.now());
@@ -65,14 +66,16 @@ const GameScreen = () => {
   };
 
   const restartGame = async () => {
+    dispatch(setIsLoading(true));
     const response = await getPuzzle();
 
-    // if (!!response) {
-    //   setSolution(response.content);
-    //   setUsedLetters([]);
-    //   setNumberOfMistakes(0);
-    //   resetStartTime();
-    // }
+    if (response.status === 200) {
+      setSolution(response.data.content);
+      setUsedLetters([]);
+      setNumberOfMistakes(0);
+      resetStartTime();
+    }
+    dispatch(setIsLoading(false));
   };
 
   const handleCancelButtonClick = () => {
@@ -98,7 +101,7 @@ const GameScreen = () => {
       <MainModal
         visible={modalVisible}
         onClickCancel={handleCancelButtonClick}
-        title={gameWon ? "You won!" : "You lost!"}
+        title="You lost!"
         onClickButton={handleConfirmButtonClick}
         description="New game?"
         showTwoButtons
