@@ -1,4 +1,3 @@
-import useDimensions from "hooks/useDimensions";
 import useWindowSize from "hooks/useWindowsSize";
 
 type Props = {
