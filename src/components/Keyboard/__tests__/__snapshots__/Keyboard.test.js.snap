@@ -7,7 +7,8 @@ exports[`renders correctly 1`] = `
   <div
     className="flex w-8 aspect-square rounded-lg m-2 
       cursor-pointer items-center justify-center
-      bg-transparent"
+      bg-transparent
+      "
     onClick={[Function]}
     role="letter"
   >
@@ -16,7 +17,8 @@ exports[`renders correctly 1`] = `
   <div
     className="flex w-8 aspect-square rounded-lg m-2 
       cursor-pointer items-center justify-center
-      bg-mainExtraLight"
+      bg-mainExtraLight
+      shadow-sm"
     onClick={[Function]}
     role="letter"
   >
@@ -25,7 +27,8 @@ exports[`renders correctly 1`] = `
   <div
     className="flex w-8 aspect-square rounded-lg m-2 
       cursor-pointer items-center justify-center
-      bg-mainExtraLight"
+      bg-mainExtraLight
+      shadow-sm"
     onClick={[Function]}
     role="letter"
   >
@@ -34,7 +37,8 @@ exports[`renders correctly 1`] = `
   <div
     className="flex w-8 aspect-square rounded-lg m-2 
       cursor-pointer items-center justify-center
-      bg-transparent"
+      bg-transparent
+      "
     onClick={[Function]}
     role="letter"
   >
@@ -43,7 +47,8 @@ exports[`renders correctly 1`] = `
   <div
     className="flex w-8 aspect-square rounded-lg m-2 
       cursor-pointer items-center justify-center
-      bg-mainExtraLight"
+      bg-mainExtraLight
+      shadow-sm"
     onClick={[Function]}
     role="letter"
   >
@@ -52,7 +57,8 @@ exports[`renders correctly 1`] = `
   <div
     className="flex w-8 aspect-square rounded-lg m-2 
       cursor-pointer items-center justify-center
-      bg-transparent"
+      bg-transparent
+      "
     onClick={[Function]}
     role="letter"
   >
@@ -61,7 +67,8 @@ exports[`renders correctly 1`] = `
   <div
     className="flex w-8 aspect-square rounded-lg m-2 
       cursor-pointer items-center justify-center
-      bg-mainExtraLight"
+      bg-mainExtraLight
+      shadow-sm"
     onClick={[Function]}
     role="letter"
   >
@@ -70,7 +77,8 @@ exports[`renders correctly 1`] = `
   <div
     className="flex w-8 aspect-square rounded-lg m-2 
       cursor-pointer items-center justify-center
-      bg-mainExtraLight"
+      bg-mainExtraLight
+      shadow-sm"
     onClick={[Function]}
     role="letter"
   >
@@ -79,7 +87,8 @@ exports[`renders correctly 1`] = `
   <div
     className="flex w-8 aspect-square rounded-lg m-2 
       cursor-pointer items-center justify-center
-      bg-mainExtraLight"
+      bg-mainExtraLight
+      shadow-sm"
     onClick={[Function]}
     role="letter"
   >
@@ -88,7 +97,8 @@ exports[`renders correctly 1`] = `
   <div
     className="flex w-8 aspect-square rounded-lg m-2 
       cursor-pointer items-center justify-center
-      bg-mainExtraLight"
+      bg-mainExtraLight
+      shadow-sm"
     onClick={[Function]}
     role="letter"
   >
@@ -97,7 +107,8 @@ exports[`renders correctly 1`] = `
   <div
     className="flex w-8 aspect-square rounded-lg m-2 
       cursor-pointer items-center justify-center
-      bg-mainExtraLight"
+      bg-mainExtraLight
+      shadow-sm"
     onClick={[Function]}
     role="letter"
   >
@@ -106,7 +117,8 @@ exports[`renders correctly 1`] = `
   <div
     className="flex w-8 aspect-square rounded-lg m-2 
       cursor-pointer items-center justify-center
-      bg-mainExtraLight"
+      bg-mainExtraLight
+      shadow-sm"
     onClick={[Function]}
     role="letter"
   >
@@ -115,7 +127,8 @@ exports[`renders correctly 1`] = `
   <div
     className="flex w-8 aspect-square rounded-lg m-2 
       cursor-pointer items-center justify-center
-      bg-mainExtraLight"
+      bg-mainExtraLight
+      shadow-sm"
     onClick={[Function]}
     role="letter"
   >
@@ -124,7 +137,8 @@ exports[`renders correctly 1`] = `
   <div
     className="flex w-8 aspect-square rounded-lg m-2 
       cursor-pointer items-center justify-center
-      bg-mainExtraLight"
+      bg-mainExtraLight
+      shadow-sm"
     onClick={[Function]}
     role="letter"
   >
@@ -133,7 +147,8 @@ exports[`renders correctly 1`] = `
   <div
     className="flex w-8 aspect-square rounded-lg m-2 
       cursor-pointer items-center justify-center
-      bg-mainExtraLight"
+      bg-mainExtraLight
+      shadow-sm"
     onClick={[Function]}
     role="letter"
   >
@@ -142,7 +157,8 @@ exports[`renders correctly 1`] = `
   <div
     className="flex w-8 aspect-square rounded-lg m-2 
       cursor-pointer items-center justify-center
-      bg-mainExtraLight"
+      bg-mainExtraLight
+      shadow-sm"
     onClick={[Function]}
     role="letter"
   >
@@ -151,7 +167,8 @@ exports[`renders correctly 1`] = `
   <div
     className="flex w-8 aspect-square rounded-lg m-2 
       cursor-pointer items-center justify-center
-      bg-mainExtraLight"
+      bg-mainExtraLight
+      shadow-sm"
     onClick={[Function]}
     role="letter"
   >
@@ -160,7 +177,8 @@ exports[`renders correctly 1`] = `
   <div
     className="flex w-8 aspect-square rounded-lg m-2 
       cursor-pointer items-center justify-center
-      bg-mainExtraLight"
+      bg-mainExtraLight
+      shadow-sm"
     onClick={[Function]}
     role="letter"
   >
@@ -169,7 +187,8 @@ exports[`renders correctly 1`] = `
   <div
     className="flex w-8 aspect-square rounded-lg m-2 
       cursor-pointer items-center justify-center
-      bg-transparent"
+      bg-transparent
+      "
     onClick={[Function]}
     role="letter"
   >
@@ -178,7 +197,8 @@ exports[`renders correctly 1`] = `
   <div
     className="flex w-8 aspect-square rounded-lg m-2 
       cursor-pointer items-center justify-center
-      bg-mainExtraLight"
+      bg-mainExtraLight
+      shadow-sm"
     onClick={[Function]}
     role="letter"
   >
@@ -187,7 +207,8 @@ exports[`renders correctly 1`] = `
   <div
     className="flex w-8 aspect-square rounded-lg m-2 
       cursor-pointer items-center justify-center
-      bg-mainExtraLight"
+      bg-mainExtraLight
+      shadow-sm"
     onClick={[Function]}
     role="letter"
   >
@@ -196,7 +217,8 @@ exports[`renders correctly 1`] = `
   <div
     className="flex w-8 aspect-square rounded-lg m-2 
       cursor-pointer items-center justify-center
-      bg-mainExtraLight"
+      bg-mainExtraLight
+      shadow-sm"
     onClick={[Function]}
     role="letter"
   >
@@ -205,7 +227,8 @@ exports[`renders correctly 1`] = `
   <div
     className="flex w-8 aspect-square rounded-lg m-2 
       cursor-pointer items-center justify-center
-      bg-mainExtraLight"
+      bg-mainExtraLight
+      shadow-sm"
     onClick={[Function]}
     role="letter"
   >
@@ -214,7 +237,8 @@ exports[`renders correctly 1`] = `
   <div
     className="flex w-8 aspect-square rounded-lg m-2 
       cursor-pointer items-center justify-center
-      bg-mainExtraLight"
+      bg-mainExtraLight
+      shadow-sm"
     onClick={[Function]}
     role="letter"
   >
@@ -223,7 +247,8 @@ exports[`renders correctly 1`] = `
   <div
     className="flex w-8 aspect-square rounded-lg m-2 
       cursor-pointer items-center justify-center
-      bg-mainExtraLight"
+      bg-mainExtraLight
+      shadow-sm"
     onClick={[Function]}
     role="letter"
   >
@@ -232,7 +257,8 @@ exports[`renders correctly 1`] = `
   <div
     className="flex w-8 aspect-square rounded-lg m-2 
       cursor-pointer items-center justify-center
-      bg-mainExtraLight"
+      bg-mainExtraLight
+      shadow-sm"
     onClick={[Function]}
     role="letter"
   >

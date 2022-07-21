@@ -1,0 +1,285 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="w-full flex flex-wrap items-center px-8"
+>
+  <span
+    className="flex flex-row mr-8"
+    role="word"
+  >
+    <span
+      className="flex flex-col relative text-mainText font-semibold border-gray-600 mx-1 my-1 h-4 py-4
+                  justify-center
+                  w-8
+                  border-b-4
+                  items-center"
+      role="letter"
+    >
+      <p
+        className=""
+      />
+    </span>
+    <span
+      className="flex flex-col relative text-mainText font-semibold border-gray-600 mx-1 my-1 h-4 py-4
+                  justify-center
+                  w-8
+                  border-b-4
+                  items-center"
+      role="letter"
+    >
+      <p
+        className=""
+      />
+    </span>
+    <span
+      className="flex flex-col relative text-mainText font-semibold border-gray-600 mx-1 my-1 h-4 py-4
+                  justify-center
+                  w-8
+                  border-b-4
+                  items-center"
+      role="letter"
+    >
+      <p
+        className=""
+      />
+    </span>
+    <span
+      className="flex flex-col relative text-mainText font-semibold border-gray-600 mx-1 my-1 h-4 py-4
+                  justify-center
+                  w-8
+                  border-b-4
+                  items-center"
+      role="letter"
+    >
+      <p
+        className=""
+      >
+        s
+      </p>
+    </span>
+  </span>
+  <span
+    className="flex flex-row mr-8"
+    role="word"
+  >
+    <span
+      className="flex flex-col relative text-mainText font-semibold border-gray-600 mx-1 my-1 h-4 py-4
+                  justify-center
+                  w-8
+                  border-b-4
+                  items-center"
+      role="letter"
+    >
+      <p
+        className=""
+      />
+    </span>
+    <span
+      className="flex flex-col relative text-mainText font-semibold border-gray-600 mx-1 my-1 h-4 py-4
+                  justify-center
+                  w-8
+                  border-b-4
+                  items-center"
+      role="letter"
+    >
+      <p
+        className=""
+      >
+        s
+      </p>
+    </span>
+  </span>
+  <span
+    className="flex flex-row mr-8"
+    role="word"
+  >
+    <span
+      className="flex flex-col relative text-mainText font-semibold border-gray-600 mx-1 my-1 h-4 py-4
+                  justify-center
+                  w-8
+                  border-b-4
+                  items-center"
+      role="letter"
+    >
+      <p
+        className=""
+      >
+        a
+      </p>
+    </span>
+  </span>
+  <span
+    className="flex flex-row mr-8"
+    role="word"
+  >
+    <span
+      className="flex flex-col relative text-mainText font-semibold border-gray-600 mx-1 my-1 h-4 py-4
+                  justify-center
+                  w-8
+                  border-b-4
+                  items-center"
+      role="letter"
+    >
+      <p
+        className=""
+      />
+    </span>
+    <span
+      className="flex flex-col relative text-mainText font-semibold border-gray-600 mx-1 my-1 h-4 py-4
+                  justify-center
+                  w-8
+                  border-b-4
+                  items-center"
+      role="letter"
+    >
+      <p
+        className=""
+      />
+    </span>
+    <span
+      className="flex flex-col relative text-mainText font-semibold border-gray-600 mx-1 my-1 h-4 py-4
+                  justify-center
+                  w-8
+                  border-b-4
+                  items-center"
+      role="letter"
+    >
+      <p
+        className=""
+      >
+        s
+      </p>
+    </span>
+    <span
+      className="flex flex-col relative text-mainText font-semibold border-gray-600 mx-1 my-1 h-4 py-4
+                  justify-center
+                  w-8
+                  border-b-4
+                  items-center"
+      role="letter"
+    >
+      <p
+        className=""
+      />
+    </span>
+  </span>
+  <span
+    className="flex flex-row mr-8"
+    role="word"
+  >
+    <span
+      className="flex flex-col relative text-mainText font-semibold border-gray-600 mx-1 my-1 h-4 py-4
+                  justify-center
+                  w-8
+                  border-b-4
+                  items-center"
+      role="letter"
+    >
+      <p
+        className=""
+      >
+        s
+      </p>
+    </span>
+    <span
+      className="flex flex-col relative text-mainText font-semibold border-gray-600 mx-1 my-1 h-4 py-4
+                  justify-center
+                  w-8
+                  border-b-4
+                  items-center"
+      role="letter"
+    >
+      <p
+        className=""
+      />
+    </span>
+    <span
+      className="flex flex-col relative text-mainText font-semibold border-gray-600 mx-1 my-1 h-4 py-4
+                  justify-center
+                  w-8
+                  border-b-4
+                  items-center"
+      role="letter"
+    >
+      <p
+        className=""
+      />
+    </span>
+    <span
+      className="flex flex-col relative text-mainText font-semibold border-gray-600 mx-1 my-1 h-4 py-4
+                  justify-center
+                  w-8
+                  border-b-4
+                  items-center"
+      role="letter"
+    >
+      <p
+        className=""
+      />
+    </span>
+    <span
+      className="flex flex-col relative text-mainText font-semibold border-gray-600 mx-1 my-1 h-4 py-4
+                  justify-center
+                  w-8
+                  border-b-4
+                  items-center"
+      role="letter"
+    >
+      <p
+        className=""
+      />
+    </span>
+    <span
+      className="flex flex-col relative text-mainText font-semibold border-gray-600 mx-1 my-1 h-4 py-4
+                  justify-center
+                  w-8
+                  border-b-4
+                  items-center"
+      role="letter"
+    >
+      <p
+        className=""
+      />
+    </span>
+    <span
+      className="flex flex-col relative text-mainText font-semibold border-gray-600 mx-1 my-1 h-4 py-4
+                  justify-center
+                  w-8
+                  border-b-4
+                  items-center"
+      role="letter"
+    >
+      <p
+        className=""
+      />
+    </span>
+    <span
+      className="flex flex-col relative text-mainText font-semibold border-gray-600 mx-1 my-1 h-4 py-4
+                  justify-center
+                  w-8
+                  border-b-4
+                  items-center"
+      role="letter"
+    >
+      <p
+        className=""
+      />
+    </span>
+    <span
+      className="flex flex-col relative text-mainText font-semibold border-gray-600 mx-1 my-1 h-4 py-4
+                  justify-flex-end
+                  w-2
+                  border-b-0
+                  items-end"
+      role="letter"
+    >
+      <p
+        className=""
+      >
+        .
+      </p>
+    </span>
+  </span>
+</div>
+`;

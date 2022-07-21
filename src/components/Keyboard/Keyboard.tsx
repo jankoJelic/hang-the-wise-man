@@ -14,7 +14,8 @@ const Keyboard: React.FC<Props> = ({ onClickLetter, usedLetters }) => {
         role="letter"
         className={`flex w-8 aspect-square rounded-lg m-2 
       cursor-pointer items-center justify-center
-      ${letterIsUsed ? "bg-transparent" : "bg-mainExtraLight"}`}
+      ${letterIsUsed ? "bg-transparent" : "bg-mainExtraLight"}
+      ${letterIsUsed ? "" : "shadow-sm"}`}
         onClick={() => onClickLetter(letter)}
       >
         {letter}

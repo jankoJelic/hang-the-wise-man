@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
 import renderer from "react-test-renderer";
 
 import MainModal from "../MainModal";

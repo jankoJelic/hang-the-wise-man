@@ -9,8 +9,13 @@ const Solution = ({ solution, usedLetters }: Props) => {
   const renderLetters = () => {
     return solution.split(" ").map((word, index) => {
       return (
-        <span className="flex flex-row mr-8" key={word + "-" + index}>
+        <span
+          role="word"
+          className="flex flex-row mr-8"
+          key={word + "-" + index}
+        >
           {word.split("").map((char, i) => {
+            console.log(word);
             const isLetter = onlyLettersInString(char);
             const isUsed = usedLetters.includes(char.toUpperCase());
             const isQuotationMark = char === "'";
@@ -19,6 +24,7 @@ const Solution = ({ solution, usedLetters }: Props) => {
 
             return (
               <span
+                role="letter"
                 key={char + word + "--" + index + i}
                 className={`flex flex-col relative text-mainText font-semibold border-gray-600 mx-1 my-1 h-4 py-4
                   justify-${isLetter ? "center" : "flex-end"}
