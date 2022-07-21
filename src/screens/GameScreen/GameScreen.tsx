@@ -23,11 +23,10 @@ const GameScreen = () => {
 
   const [solution, setSolution] = useState(data.content);
   const [startTime, setStartTime] = useState(Date.now());
-  const [endTime, setEndTime] = useState(Date.now());
   const [usedLetters, setUsedLetters] = useState<string[]>([]);
   const [numberOfMistakes, setNumberOfMistakes] = useState(0);
   const [modalVisible, setModalVisible] = useState(false);
-
+  console.log(data);
   const parsedSolution = solution.toUpperCase().replace(/[^A-Z]+/g, "");
   const lastChance = numberOfMistakes === 6;
   const goToHomePage = () => navigate("/");
@@ -46,7 +45,7 @@ const GameScreen = () => {
 
   useEffect(() => {
     if (gameWon) {
-      const duration = Date.now() - startTime
+      const duration = Date.now() - startTime;
       postHighScore(data, numberOfMistakes, duration, usedLetters);
       navigate("/highscores");
     }
