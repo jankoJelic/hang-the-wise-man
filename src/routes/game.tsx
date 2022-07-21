@@ -71,6 +71,7 @@ const Game = () => {
       setSolution(response.content);
       setUsedLetters([]);
       setNumberOfMistakes(0);
+      resetStartTime();
     }
   };
 

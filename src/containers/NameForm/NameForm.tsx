@@ -1,19 +1,15 @@
 import React, { useState } from "react";
-// import { appContext } from "../../context/appContext";
 import { useNavigate } from "react-router-dom";
 import Button from "components/Button";
 import getPuzzle from "services/getPuzzle";
 import Subtitle from "components/textComponents/Subtitle/Subtitle";
 import MainModal from "components/MainModal";
-import { useSelector, useDispatch } from "react-redux";
-import { RootState } from "store/store";
-import { setPlayerName } from "store/appSlice";
+import { useDispatch } from "react-redux";
+import { setIsLoading, setPlayerName } from "store/appSlice";
 
 const NameForm = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const appState = useSelector((state: RootState) => state.appState);
-  // const appState = useContext(appContext);
 
   const [value, setValue] = useState("");
   const [modalVisible, setModalVisible] = useState(false);
@@ -27,6 +23,8 @@ const NameForm = () => {
     event.key === "Enter" && onSubmitName();
 
   const onSubmitName = async () => {
+    dispatch(setIsLoading(true));
+
     if (!value) {
       setModalVisible(true);
       return;
@@ -38,6 +36,7 @@ const NameForm = () => {
       dispatch(setPlayerName(value));
       navigate("/game", { state: { data: response } });
     }
+    dispatch(setIsLoading(false));
   };
 
   return (

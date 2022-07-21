@@ -8,6 +8,7 @@ import Game from "routes/game";
 import Highscores from "routes/highscores";
 import { Provider } from "react-redux";
 import store from "store/store";
+import LoadingSpinner from "components/LoadingSpinner";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -22,6 +23,7 @@ root.render(
           <Route path="game" element={<Game />} />
           <Route path="highscores" element={<Highscores />} />
         </Routes>
+        <LoadingSpinner />
       </Provider>
     </React.StrictMode>
   </BrowserRouter>

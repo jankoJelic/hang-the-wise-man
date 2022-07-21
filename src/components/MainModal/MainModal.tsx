@@ -1,3 +1,4 @@
+import BackdropOverlay from "components/BackdropOverlay";
 import Button from "components/Button";
 import Subtitle from "components/textComponents/Subtitle";
 import Title from "components/textComponents/Title";
@@ -22,10 +23,7 @@ const MainModal = ({
   onClickCancel,
 }: Props) => {
   return visible ? (
-    <div
-      className="flex fixed inset-0 left-0 w-screen h-screen
-     bg-mainText bg-opacity-60 items-center justify-center shadow-md"
-    >
+    <BackdropOverlay>
       <div className="flex flex-col w-72 sm:w-96 p-4 h-54 sm:h-72 bg-white rounded-xl items-center relative">
         <Title text={title} />
         {description && <Subtitle text={description} />}
@@ -44,7 +42,7 @@ const MainModal = ({
           )}
         </div>
       </div>
-    </div>
+    </BackdropOverlay>
   ) : (
     <></>
   );
