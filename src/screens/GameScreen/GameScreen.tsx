@@ -67,12 +67,12 @@ const GameScreen = () => {
   const restartGame = async () => {
     const response = await getPuzzle();
 
-    if (!!response) {
-      setSolution(response.content);
-      setUsedLetters([]);
-      setNumberOfMistakes(0);
-      resetStartTime();
-    }
+    // if (!!response) {
+    //   setSolution(response.content);
+    //   setUsedLetters([]);
+    //   setNumberOfMistakes(0);
+    //   resetStartTime();
+    // }
   };
 
   const handleCancelButtonClick = () => {

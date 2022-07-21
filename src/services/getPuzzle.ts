@@ -1,7 +1,7 @@
+import axios from "axios";
+
 const getPuzzle = async () => {
-  const response = await fetch("http://api.quotable.io/random")
-    .then((res) => res.json())
-    .catch((err) => {});
+  const response = await axios.get("http://api.quotable.io/random");
 
   return response;
 };

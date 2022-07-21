@@ -32,9 +32,9 @@ const NameForm = () => {
 
     const response = await getPuzzle();
 
-    if (!!response) {
+    if (response.status === 200) {
       dispatch(setPlayerName(value));
-      navigate("/game", { state: { data: response } });
+      navigate("/game", { state: { data: response.data } });
     }
     dispatch(setIsLoading(false));
   };
