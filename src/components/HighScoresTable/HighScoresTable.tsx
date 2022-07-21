@@ -39,7 +39,6 @@ const HighScoresTable = ({ data }: { data: Highscore[] }) => {
       </thead>
       <tbody>
         {dataByScore.map((hs, index) => {
-          console.log(hs);
           return (
             <tr
               key={hs.id}
