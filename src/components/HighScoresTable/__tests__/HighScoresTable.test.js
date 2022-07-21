@@ -32,19 +32,21 @@ const mockData = [
   },
 ];
 
+const renderTable = () => render(<HighScoresTable data={mockData} />);
+
 it("renders correctly", () => {
   const tree = renderer.create(<HighScoresTable data={mockData} />).toJSON();
   expect(tree).toMatchSnapshot();
 });
 
 it("has 6 columns", () => {
-  render(<HighScoresTable data={mockData} />);
+  renderTable();
 
   expect(screen.getAllByRole("columnheader")).toHaveLength(6);
 });
 
 it("its body contains one row for each item in data", () => {
-  render(<HighScoresTable data={mockData} />);
+  renderTable();
 
   expect(screen.getAllByRole("cell")).toHaveLength(6 * mockData.length);
 });
