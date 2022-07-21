@@ -1,0 +1,2 @@
+import HighScoresTable from "../HighScoresTable";
+
