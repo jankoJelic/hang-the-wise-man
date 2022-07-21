@@ -16,7 +16,7 @@ type Puzzle = {
   length: number;
 };
 
-const Game = () => {
+const GameScreen = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const appState = useSelector((state: RootState) => state.appState);
@@ -104,4 +104,4 @@ const Game = () => {
   );
 };
 
-export default Game;
+export default GameScreen;
