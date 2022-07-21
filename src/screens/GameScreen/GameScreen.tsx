@@ -75,6 +75,16 @@ const GameScreen = () => {
     }
   };
 
+  const handleCancelButtonClick = () => {
+    setModalVisible(false);
+    goToHomePage();
+  };
+
+  const handleConfirmButtonClick = () => {
+    setModalVisible(false);
+    restartGame();
+  };
+
   return (
     <div className="flex flex-col items-center pt-10">
       <Title text={`Good luck, ${appState.playerName}!`} />
@@ -87,15 +97,9 @@ const GameScreen = () => {
       <Button title="Restart game" styles="w-48 mt-12" onClick={restartGame} />
       <MainModal
         visible={modalVisible}
-        onClickCancel={() => {
-          setModalVisible(false);
-          goToHomePage();
-        }}
+        onClickCancel={handleCancelButtonClick}
         title={gameWon ? "You won!" : "You lost!"}
-        onClickButton={() => {
-          setModalVisible(false);
-          restartGame();
-        }}
+        onClickButton={handleConfirmButtonClick}
         description="New game?"
         showTwoButtons
         confirmButtonTitle="Yes, please"
