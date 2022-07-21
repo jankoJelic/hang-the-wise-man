@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="border-b-4 w-72 border-mainText h-52 relative pl-6 mb-8"
+  role="container"
+>
+  <div
+    role="gallows"
+  >
+    <div
+      className="w-1 bg-mainText h-52"
+    />
+    <div
+      className="h-1 bg-mainText absolute top-0 w-32"
+    />
+    <div
+      className="w-1 h-4 bg-mainText absolute ml-32 top-0"
+    />
+  </div>
+</div>
+`;
