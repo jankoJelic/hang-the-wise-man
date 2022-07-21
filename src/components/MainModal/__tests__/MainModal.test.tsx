@@ -24,7 +24,11 @@ const renderModalWithTwoButtons = () =>
   );
 
 it("renders correctly", () => {
-  const tree = renderer.create(<MainModal />).toJSON();
+  const tree = renderer
+    .create(
+      <MainModal onClickButton={mockClickConfirmButton} title="Modal" visible />
+    )
+    .toJSON();
   expect(tree).toMatchSnapshot();
 });
 

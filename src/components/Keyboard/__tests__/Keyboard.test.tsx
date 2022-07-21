@@ -3,7 +3,7 @@ import renderer from "react-test-renderer";
 import { fireEvent, render, screen } from "@testing-library/react";
 
 const mockClickLetter = jest.fn();
-const mockUsedLetters = "ASDF";
+const mockUsedLetters = ["A", "S", "D", "F"];
 
 const renderKeyboard = () =>
   render(

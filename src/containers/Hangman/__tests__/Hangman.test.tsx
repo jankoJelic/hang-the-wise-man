@@ -2,7 +2,8 @@ import { render } from "@testing-library/react";
 import renderer from "react-test-renderer";
 import Hangman from "../Hangman";
 
-const renderHangman = (mistakes) => render(<Hangman mistakes={mistakes} />);
+const renderHangman = (mistakes: number) =>
+  render(<Hangman mistakes={mistakes} />);
 
 it("renders correctly", () => {
   const tree = renderer.create(<Hangman mistakes={0} />).toJSON();

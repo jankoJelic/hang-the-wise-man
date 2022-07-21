@@ -1,10 +1,11 @@
 import HighScoresTable from "../HighScoresTable";
 import renderer from "react-test-renderer";
 import { render, screen } from "@testing-library/react";
+import Highscore from "models/Highscore";
 
-const mockData = [
+const mockData: Highscore[] = [
   {
-    id: 1,
+    id: "1",
     length: 20,
     userName: "janko",
     duration: 100000,
@@ -13,7 +14,7 @@ const mockData = [
     uniqueCharacters: 17,
   },
   {
-    id: 2,
+    id: "2",
     length: 22,
     userName: "jakov",
     duration: 222222,
@@ -22,7 +23,7 @@ const mockData = [
     uniqueCharacters: 14,
   },
   {
-    id: 3,
+    id: "3",
     length: 99,
     userName: "user3",
     duration: 88888,

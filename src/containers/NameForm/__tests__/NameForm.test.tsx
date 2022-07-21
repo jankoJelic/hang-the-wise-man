@@ -25,7 +25,7 @@ describe("input field", () => {
   it("displays correct text entry and enables the button when has entry", () => {
     renderNameForm();
 
-    const inputField = screen.getByRole("textbox");
+    const inputField: HTMLInputElement = screen.getByRole("textbox");
 
     fireEvent.change(inputField, { target: { value: "asdf" } });
 
@@ -36,7 +36,7 @@ describe("input field", () => {
   it("parses the input so only letters are accepted", () => {
     renderNameForm();
 
-    const inputField = screen.getByRole("textbox");
+    const inputField: HTMLInputElement = screen.getByRole("textbox");
 
     fireEvent.change(inputField, { target: { value: "asdf23" } });
 
